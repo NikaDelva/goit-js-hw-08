@@ -5,7 +5,7 @@ const userDataStorage = {};
 
 const fillContactForm = () => { 
     const userInfoLS = JSON.parse(localStorage.getItem('feedback-form-state'));
-    if (userInfoLS === null) {
+    if (!userInfoLS) {
         return;
     }
     for (const key in userInfoLS) {
