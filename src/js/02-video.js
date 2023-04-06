@@ -15,4 +15,4 @@ const onPlay = function(data) {
 };
 const time = +localStorage.getItem('videoplayer-current-time')
 player.setCurrentTime(time || 0);
-player.on('timeupdate', throttle(() => { 'onPlay', 1000 }));
+player.on('timeupdate', throttle(onPlay, 1000));
